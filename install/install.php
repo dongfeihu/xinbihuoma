@@ -147,7 +147,8 @@
     }else{
         
         // 验证数据库地址、账号、密码
-        $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+        $conn = new mysqli($db_host, $db_user, '', $db_name);
+        // var_dump($conn);exit;
         
         // 根据数据库连接返回的错误信息判断连接失败的原因
         if($conn->connect_error == 'Connection timed out'){
@@ -599,7 +600,7 @@
                         'db_port' => 3306,
                         'db_name' => $db_name,
                         'db_user' => $db_user,
-                        'db_pass' => $db_pass,
+                        'db_pass' => '',
                         'db_prefix' => '',
                         'folderNum' => $install_folder,
                         'version' => '2.3.0'

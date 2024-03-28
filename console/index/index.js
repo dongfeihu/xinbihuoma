@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $swiper_wrapper = 
     `<div class="swiper-wrapper" title="点击切换图表">
         <div class="swiper-slide swiper-slide-selected" data-type="qun">
-            <div class="card-title">群活码</div>
+            <div class="card-title">活码</div>
             <div class="card-num qunNum"> - </div>
             <div class="ip-num">
                 <span class="ip-title">今日uv</span>
@@ -108,29 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <span class="ipNum yt-qunIP"> - </span>
             </div>
         </div>
-        
-        <div class="swiper-slide" data-type="kf">
-            <div class="card-title">客服码</div>
-            <div class="card-num kfNum"> - </div>
-            <div class="ip-num">
-                <span class="ip-title">今日uv</span>
-                <span class="ipNum td-kfIP"> - </span>
-                <span class="ip-title">昨日uv</span>
-                <span class="ipNum yt-kfIP"> - </span>
-            </div>
-        </div>
-        
-        <div class="swiper-slide" data-type="channel">
-            <div class="card-title">渠道码</div>
-            <div class="card-num channelNum"> - </div>
-            <div class="ip-num">
-                <span class="ip-title">今日uv</span>
-                <span class="ipNum td-channelIP"> - </span>
-                <span class="ip-title">昨日uv</span>
-                <span class="ipNum yt-channelIP"> - </span>
-            </div>
-        </div>
-        
+                
         <div class="swiper-slide" data-type="dwz">
             <div class="card-title">短网址</div>
             <div class="card-num dwzNum"> - </div>
@@ -139,28 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <span class="ipNum td-dwzIP"> - </span>
                 <span class="ip-title">昨日uv</span>
                 <span class="ipNum yt-dwzIP"> - </span>
-            </div>
-        </div>
-        
-        <div class="swiper-slide" data-type="zjy">
-            <div class="card-title">淘宝客</div>
-            <div class="card-num zjyNum"> - </div>
-            <div class="ip-num">
-                <span class="ip-title">今日uv</span>
-                <span class="ipNum td-zjyIP"> - </span>
-                <span class="ip-title">昨日uv</span>
-                <span class="ipNum yt-zjyIP"> - </span>
-            </div>
-        </div>
-        
-        <div class="swiper-slide" data-type="shareCard">
-            <div class="card-title">分享卡片</div>
-            <div class="card-num shareCardNum"> - </div>
-            <div class="ip-num">
-                <span class="ip-title">今日uv</span>
-                <span class="ipNum td-shareCardIP"> - </span>
-                <span class="ip-title">昨日uv</span>
-                <span class="ipNum yt-shareCardIP"> - </span>
             </div>
         </div>
         
@@ -375,45 +331,38 @@ function projectInfo(){
     
     const links = [
     {
-        title: "开源地址 >>",
-        desc: "获取作者的正版源码及更新动态。",
-        url: "https://github.com/likeyun/liKeYun_Ylb",
+        title: "客服:",
+        desc: "@jax",
+        url:"https://t.me/jax_dong"
     },
     {
-        title: "使用说明 >>",
-        desc: "快速学习和了解正确的使用姿势。",
-        url: "https://docs.qq.com/doc/DREdWVGJxeFFOSFhI",
+        title: "TG群组:",
+        desc: "@测试群",
+        url:"https://t.me/+LtCYeLv5kQU2YTBl"
     },
     {
-        title: "开发文档 >>",
-        desc: "阅读以进行二次开发和个性化修改。",
-        url: "https://docs.qq.com/doc/DRE9aWlRqZUdFRWl1",
+        title: "",
+        desc: "邀请新用户送1个入口域名+1个落地域名",
+        url:""
     },
     {
-        title: "用户交流群 >>",
-        desc: "加群讨论部署安装、使用、开发等话题。",
-        url: "../../static/img/jiaQun.jpg",
+        title: "",
+        desc: "别一个落地配好几个入口，这样会影响，死的快",
+        url:""
     },
     {
-        title: "反馈建议 >>",
-        desc: "对本开源作品的反馈及开发建议。",
-        url: "https://support.qq.com/product/453822",
-    },
-    {
-        title: "作者博客 >>",
-        desc: "关注作者的博客学习开发编程基础。",
-        url: "https://segmentfault.com/u/tanking",
-    },
-    {
-        title: "赞赏作者 >>",
-        desc: "没有任何盈利，全靠赞赏支持继续维护。",
-        url: "../../static/img/zansangma.jpg",
+        title: "",
+        desc: "建议打完删除广告，隔夜的话容易死码",
+        url:""
     },
     ];
     
     links.forEach((link) => {
         const linkElement = document.createElement("a");
-        linkElement.href = link.url;
+        if(link.url){
+            linkElement.href = link.url;
+        }
+        
         linkElement.target = "_blank";
     
         const linkCardElement = document.createElement("div");
